@@ -35,41 +35,39 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Projects</a></li>
+              <li><a href="#projects" aria-controls="projects" role="tab" data-toggle="tab">Projects</a></li>
+              <li><a href="#games" aria-controls="games" role="tab" data-toggle="tab">Games</a></li>
+              <li><a href="#designs" aria-controls="designs" role="tab" data-toggle="tab">Designs</a></li>
+              <li><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
-
-
-
-
-      <!-- <nav class="navbar navbar-fixed-top bs-navbar-collapse eten-container">
-
-
         
-      </nav> -->
+      </nav>
     </header>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner"><!-- One body inner -->
+    <div class="">
+      <div class="site-wrapper jumbotron projectholder eten-container">
+        <p class="lead"> Hello! </p>
+        <p> Daniel Xiao is a multidisciplinary developer and designer who has a passion for creating interactive projects. He works with Javascript, JQuery, HTML, and CSS to design web applications. He works in Flash + Actionscript, Unity + C#, and Photoshop to design games. Look at his projects below!</p>
+      </div>
 
-        
-
-        <div class="jumbotron projectholder">
-          <p class="lead"> Hello! </p>
-          <p> Daniel Xiao is a multidisciplinary developer and designer who has a passion for creating interactive projects. </p>
-        </div>
+      <!-- CONTENT! -->
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">Home</div>
+        <div role="tabpanel" class="tab-pane" id="projects">Projects</div>
+        <div role="tabpanel" class="tab-pane" id="games">Games</div>
+        <div role="tabpanel" class="tab-pane" id="designs">Designs</div>
+        <div role="tabpanel" class="tab-pane" id="about">About</div>
+      </div>
 
       <footer class="eten-container">
         <hr>
         <h5>Daniel Xiao made this using <a href="http://getbootstrap.com/">Bootstrap</a>. Check out this website's source code on <a href="https://github.com/neonwednesdays/ElementTen">Github</a>.</h5>
       </footer>
 
-      </div><!-- site-wrapper-inner -->
-    </div>
+    </div><!-- site-wrapper -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
