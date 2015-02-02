@@ -1,0 +1,66 @@
+/* 
+	Magic~
+*/
+html, body{
+	height: 100%;
+	background-color: #426D85;
+}
+footer{
+	color: #fff;
+	text-align: center;
+}
+.brand{
+	color: #426D85;
+	margin-left: 1em;
+}
+.container{
+
+}
+
+/*
+	Fonts
+*/
+h5, .h5{
+	font-weight: 200;
+}
+
+
+/*
+	overwritting some default boostrap stuff
+*/
+.site-wrapper-inner{
+	padding-top: 55px;
+}
+.navbar{
+
+}
+
+/*
+ * Cover-style bootstrap Base structure
+ */
+
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+/* It's a line */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
