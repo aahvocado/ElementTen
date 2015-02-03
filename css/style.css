@@ -107,6 +107,9 @@ footer a:hover{
   min-height: 500px;
   background-color: #426D85;
 }
+.modal-body img{
+  width: 100%;
+}
 
 /*
   Navbar

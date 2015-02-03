@@ -29,10 +29,10 @@ function getText(tabname){
 			return 'major projects Daniel has made';
 			break;
 		case 'games':
-			return 'a collection of game projects';
+			return 'games and crazy ideas over the years';
 			break;
 		case 'designs':
-			return 'ideation from graphic design to functional design';
+			return 'ideation from mockups to designs';
 			break;
 		case 'about':
 			return 'more about Daniel Xiao';
