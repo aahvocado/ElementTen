@@ -3,6 +3,7 @@ $(document).ready(function(){
 	//what tab did ya click?
 	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 		window.scrollTo(0,0);
+ 		// $("html, body").animate({ scrollTop: 0 }, "fast");
 
 		var tabname = $(e.target).attr('aria-controls');
 		$('.jumbo-info').empty();

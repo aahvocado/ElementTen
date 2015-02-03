@@ -4,16 +4,14 @@ var designs = [];
 $(document).ready(function(){
 	initAllProjects();
 	createProjects(mainprojects, 'projects');
-	//clicking on a project item
-	$('.item-clickable').click(function(){
-		$('#myModal').modal('show');
-		$('.modal-title').html(mentorweb.name);
-		$('.modal-body').html(mentorweb.descriptionString);
-	})
+	//clicking on a project item  -- !!! this one is just for test
+	// $('.item-clickable').click(function(){
+	// 	$('#myModal').modal('show');
+	// 	$('.modal-title').html(mentorweb.name);
+	// 	$('.modal-body').html(mentorweb.descriptionString);
+	// })
 	//clicking the view project button
-	$('.view-project').click(function(){
-		window.location = mentorweb.weburl;
-	});
+	
 	$('#myModal').on('hidden.bs.modal', function (e) {
 	  $('.modal-body').empty();
 	})
@@ -23,6 +21,7 @@ $(document).ready(function(){
 function createProjects(list, type){
 	for(var i=0;i<list.length;i++){
 		var rownum = i===0 ? 0:Math.floor(i/3);
+		var p = list[i];//p is for project :)
 
 		if(i%3 === 0){//make a new row for every third project
 			//make the card (row div)
@@ -32,19 +31,27 @@ function createProjects(list, type){
 		}
 		//make the column div
 		$('<div></div>',{
-			class: 'item-clickable col-md-4 ' + type + '-page' + '-' + i
+			class: 'item-clickable ' + '' + p.subname + '-'+ i + ' col-md-4 ' + type + '-page' + '-' + i
 		}).appendTo('.'+type+'-page'+'.'+rownum);
 
-		var contentString = '<img src="images/'+list[i].subname+'.png">';//add the image
-		contentString += '<h4 class="title">' + list[i].name+ '<span class="glyphicon glyphicon-chevron-right"></span></h4>'
+		var contentString = '<img src="images/' + p.subname + '.png">';//add the image
+		contentString += '<h4 class="title">' + p.name + '<span class="glyphicon glyphicon-chevron-right"></span></h4>'
 		$('.'+type+'-page'+'-'+i).append(contentString);
-
-		
+		giveProjectOnClickListener(p, p.subname + '-'+ i);
 	}
 }
 //give the project a click listener that will change modal data
-function giveProjectOnClickListener(){
-
+//param: project object
+function giveProjectOnClickListener(project, clickClass){
+	var p = project;
+	$('.'+clickClass).on('click',function(){
+		$('#myModal').modal('show');
+		$('.modal-title').html(p.name);
+		$('.modal-body').html(p.descriptionString);
+		$('.view-project').click(function(){
+			window.location = p.weburl;
+		});
+	});
 }
 
 function projectObject(name, imgpath){
@@ -67,10 +74,6 @@ betrayalhelper.descriptionString = '';
 
 function initAllProjects(){
 	mainprojects = [];
-	mainprojects.push(mentorweb);
-	mainprojects.push(betrayalhelper);
-	mainprojects.push(mentorweb);
-	mainprojects.push(betrayalhelper);
 	mainprojects.push(mentorweb);
 	mainprojects.push(betrayalhelper);
 
