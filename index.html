@@ -18,8 +18,27 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
   <body>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">View Project</button>
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- actual stuff -->
     <header>
       <nav class="navbar navbar-default navbar-fixed-top eten-container">
         <div class="container-fluid">
@@ -29,7 +48,8 @@
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>
-            <h3 class="eten-brand">Daniel Xiao</h3>
+            <a class="eten-brand" href="#home" aria-controls="home" role="tab" data-toggle="tab"><h3>Daniel Xiao</h3></a>
+            <!-- <h3 class="eten-brand">Daniel Xiao</h3> -->
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,32 +68,71 @@
     </header>
     <div class="">
       <div class="site-wrapper jumbotron projectholder eten-container">
-        <p class="lead"> Hello! </p>
-        <p> Daniel Xiao is a multidisciplinary developer and designer who has a passion for creating interactive projects. He works with Javascript, JQuery, HTML, and CSS to design web applications. He works in Flash + Actionscript, Unity + C#, and Photoshop to design games. Look at his projects below!</p>
+        <div class="jumbo-info">
+          <p class="lead"> Hello! </p>
+          <p> Daniel Xiao is a multidisciplinary developer and designer who has a passion for creating interactive projects. He works with Javascript, JQuery, HTML, and CSS to design web applications. He works in Flash + Actionscript, Unity + C#, and Photoshop to design games. Look at his projects below!</p>
+        </div>
       </div>
 
       <!-- CONTENT! -->
       <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="home">Home</div>
+      <div class="tab-content eten-container">
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Launch demo modal
+          </button>
+        </div>
+
         <div role="tabpanel" class="tab-pane" id="projects">Projects</div>
+          <div class="row">
+            
+          </div>
         <div role="tabpanel" class="tab-pane" id="games">Games</div>
+        <!-- Design page -->
         <div role="tabpanel" class="tab-pane" id="designs">Designs</div>
-        <div role="tabpanel" class="tab-pane" id="about">About</div>
+
+        <!-- About page -->
+        <div role="tabpanel" class="tab-pane" id="about"> 
+          <div class="row content title">
+            <div class="col-md-6">
+              <img src="images/fisheye_daniel.jpg" class="img-responsive" alt="It's me! Okay, so there's a fisheye lens. Courtesy of Nicole Powell.">
+              <!-- <p>(Thanks Nicole!)</p> -->
+              <br> 
+              
+
+            </div>
+            
+            <div class="col-md-6">
+              <br>
+              <p>Daniel Xiao graduated from Georgia Institute of Technology in 2014. He received a Bachelors of Science in Computational Media, which is a major much like Computer Science in that it teaches how to program and utilize technology but it also focuses on digital media and how computers have potential to be an expressive and interactive medium.</p>
+              <p>So now he spending his days building games and applications.</p>
+              <p>He is also looking for employment and would love to talk to you! You can reach him at <b>dxiao.ns@gmail.com</b>.</p>
+              <p>He also volunteers at an animal shelter and has three pet rats. He loves video games and board games. </p>
+
+              <button type="button" class="btn btn-default btn-lg" onclick="download('http://www.elementten.com/documents/DanielXiao_Resume_Final.pdf')">
+                Resume <span class="glyphicon glyphicon glyphicon-download-alt"></span>
+              </button>
+            </div>
+
+            </div>
+          </div>
+        </div>
       </div>
 
-      <footer class="eten-container">
-        <hr>
-        <h5>Daniel Xiao made this using <a href="http://getbootstrap.com/">Bootstrap</a>. Check out this website's source code on <a href="https://github.com/neonwednesdays/ElementTen">Github</a>.</h5>
-      </footer>
-
     </div><!-- site-wrapper -->
-
+  <footer class="eten-container">
+    <hr>
+    <h5>Daniel Xiao made this using <a href="http://getbootstrap.com/">Bootstrap</a>. Check out this website's source code on <a href="https://github.com/neonwednesdays/ElementTen">Github</a>.</h5>
+    <h5>Contact him at <a href="mailto:dxiao.ns@gmail.com">dxiao.ns@gmail.com</a></h5>
+  </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/elementten.js"></script>
+    <script src="js/projectObjects.js"></script>
+
   </body>
+
 </html>

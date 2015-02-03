@@ -13,24 +13,50 @@ html, body{
 	color: #426D85;
   float: left;
 }
+a, a:hover, a:active, a:visited, a:link{
+  text-decoration: none;
+}
+.col-md-6 img {
+  width: 70%;
+  border:3px solid #ccc;
+  background-color:#fff;
+  border-radius: 25px;
+  margin: 0px auto;
+}
 
 /*
 	Fonts
 */
+p{
+  font-size: 16px;
+}
 h3{
   margin:10px 0px;
 }
 h5, .h5{
 	font-weight: 200;
 }
-p{
-  font-weight: 400;
+.jumbo-info p{
+  font-weight: 200;
   color: #fff;
   text-align: center;
 }
-p.lead{
+.jumbo-info p.lead{
   font-weight: 500;
   font-size: 3em;
+}
+.jumbo-info p.sublead{
+  color: #eee;
+}
+
+/*
+  Inner pages stuf
+*/
+.title{
+  text-align: center;
+}
+.col-md-6 p{
+  text-align: left;
 }
 /*
   Footer
@@ -50,10 +76,9 @@ footer a:hover{
 	overwritting some default boostrap stuff
 */
 .jumbotron{
-  min-height: 100px;
+  min-height: 500px;
   background-color: #426D85;
 }
-
 
 /*
   Navbar
