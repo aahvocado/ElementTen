@@ -16,13 +16,7 @@ html, body{
 a, a:hover, a:active, a:visited, a:link{
   text-decoration: none;
 }
-.col-md-6 img {
-  width: 70%;
-  border:3px solid #ccc;
-  background-color:#fff;
-  border-radius: 25px;
-  margin: 0px auto;
-}
+
 
 /*
 	Fonts
@@ -48,6 +42,12 @@ h5, .h5{
 .jumbo-info p.sublead{
   color: #eee;
 }
+/*
+
+*/
+.item-clickable{
+  cursor: pointer;
+}
 
 /*
   Inner pages stuf
@@ -57,6 +57,34 @@ h5, .h5{
 }
 .col-md-6 p{
   text-align: left;
+}
+.col-md-6 img {
+  width: 70%;
+  border:3px solid #ccc;
+  background-color:#fff;
+  border-radius: 25px;
+  margin: 0px auto;
+}
+.project{
+  margin: 0px auto;
+}
+.row{
+  margin-bottom: 1.5em;
+}
+.col-md-4 h4{
+  margin-top: 11em;
+  color: #426D85;
+  font-weight: 200;
+}
+.col-md-4 img {
+  float: left;
+  /*height: 100%;*/
+  width: 100%;
+  display: inline-block;
+  border:1px solid #848484;
+  background-color:#fff;
+  border-radius: 0px;
+  margin: 0px auto;
 }
 /*
   Footer
